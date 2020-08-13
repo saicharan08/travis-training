@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e14cc898-be66-46fb-b629-4352d54967dc" basePath="/training" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="travis-trainingFlow" doc:id="e41c081e-55a6-4e07-829a-28276fd72366" >
+		<http:listener doc:name="Listener" doc:id="59f987cc-fc0f-4373-8696-397844cd5a01" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="API response returned" doc:name="Set Payload" doc:id="5f501a6e-d857-46ef-a523-1be6cd32e1d2" />
+	</flow>
+</mule>

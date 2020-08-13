@@ -29,8 +29,8 @@
 						<cloudHubDeployment>
 							<uri>https://anypoint.mulesoft.com</uri>
 							<muleVersion>4.2.2</muleVersion>
-							<username>saitricon</username>
-							<password>Saitricon123#</password>
+							<username>${username}</username>
+							<password>${password}</password>
 							<applicationName>travis-training</applicationName>
 							<environment>Sandbox</environment>
 							<region>us-east-2</region>

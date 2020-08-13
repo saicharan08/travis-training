@@ -12,6 +12,6 @@ jobs:
       name: 'Build & Deploy Jar file'
       script:
       - echo "start build"
-      - mvn clean package deploy -DmuleDeploy
+      - mvn clean package deploy -DmuleDeploy -Dusername=$username -Dpassword=$password
       if: branch = dev
       

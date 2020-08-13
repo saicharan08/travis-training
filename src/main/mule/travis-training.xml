@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="travis-trainingFlow" doc:id="e41c081e-55a6-4e07-829a-28276fd72366" >
 		<http:listener doc:name="Listener" doc:id="59f987cc-fc0f-4373-8696-397844cd5a01" config-ref="HTTP_Listener_config" path="/test"/>
-		<logger level="INFO" doc:name="Logger" doc:id="e5b17bfe-5548-4b92-b9ec-e078bab74658" message="API process started"/>
+		<logger level="INFO" doc:name="Logger" doc:id="e5b17bfe-5548-4b92-b9ec-e078bab74658" message="API process started 1"/>
 		<set-payload value="API response returned" doc:name="Set Payload" doc:id="5f501a6e-d857-46ef-a523-1be6cd32e1d2" />
 	</flow>
 </mule>
